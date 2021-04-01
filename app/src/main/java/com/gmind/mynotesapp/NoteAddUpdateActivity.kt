@@ -131,13 +131,12 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onContextItemSelected(item: MenuItem): Boolean {
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.action_delete -> showAlertDialog(ALERT_DIALOG_DELETE)
             android.R.id.home -> showAlertDialog(ALERT_DIALOG_CLOSE)
         }
-        return super.onContextItemSelected(item)
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onBackPressed() {

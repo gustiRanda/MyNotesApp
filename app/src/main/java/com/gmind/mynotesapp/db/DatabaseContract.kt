@@ -1,5 +1,6 @@
 package com.gmind.mynotesapp.db
 
+import android.net.Uri
 import android.provider.BaseColumns
 
 internal class DatabaseContract {
@@ -11,6 +12,17 @@ internal class DatabaseContract {
             const val TITLE = "title"
             const val DESCRIPTION = "description"
             const val DATE = "date"
+
+            // untuk membuat URI content://com.gmind.mynotesapp/note
+            val CONTENT_URI : Uri = Uri.Builder().scheme(SCHEME)
+                    .authority(AUTHORITY)
+                    .appendPath(TABLE_NAME)
+                    .build()
         }
+    }
+
+    companion object {
+        const val AUTHORITY = "com.gmind.mynotesapp"
+        const val SCHEME = "content"
     }
 }
