@@ -9,7 +9,7 @@ class CustomOnItemClickListener(private val position: Int, private val onItemCli
         onItemClickCallback.onItemClicked(view, position)
     }
 
-    interface OnItemClickCallback{
+    interface OnItemClickCallback {
         fun onItemClicked(view: View, position: Int)
     }
 }
